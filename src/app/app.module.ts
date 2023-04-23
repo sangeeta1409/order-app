@@ -24,6 +24,9 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { VerifyOtpComponent } from './verify-otp/verify-otp.component';
 import { UpdatePasswordComponent } from './update-password/update-password.component';
 
+
+import { ItemService } from './service/item/item.service'; // Add this import
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +55,8 @@ import { UpdatePasswordComponent } from './update-password/update-password.compo
     MaterialModule,
     BrowserAnimationsModule
   ],
-  providers: [AuthGuard],
+  providers: [AuthGuard, ItemService],
+ 
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,21 +1,21 @@
-<app-search></app-search>
-<app-error [visible]="!foods|| foods.length <=0" resetLinkText="Reset Serach"></app-error>
+<div class="container">
+  <br>
+  <h2 class="title">Featured</h2>
 
-<ul>
-  
-  <li *ngFor="let food of foods">
-    <a routerLink="/food/{{ food.id }}">
-      <img src="{{ food.imageUrl }}" alt="food images">
-      <div class="content">
-        <div class="name">
-          {{ food.name }}
+  <!-- Add the app-error component -->
+  <app-error *ngIf="!items || items.length <= 0" resetLinkText="Refresh"></app-error>
+
+  <ul class="menu">
+    <li *ngFor="let food of items" class="menu-item">
+      <a routerLink="/food/{{ food.id }}" class="menu-item-link">
+        <div class="menu-item-img">
+          <img src="{{ food.image }}" alt="food images">
         </div>
-
-        <div class="price">
-          Prices:-{{ food.price|currency }}
+        <div class="menu-item-info">
+          <div class="menu-item-name">{{ food.name }}</div>
+          <div class="menu-item-price">{{ food.price | currency }}</div>
         </div>
-
-      </div>
-    </a>
-  </li>
-</ul>
+      </a>
+    </li>
+  </ul>
+</div>

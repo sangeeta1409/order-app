@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FoodService } from '../service/food/food.service';
-import { Foods } from '../shared/model/food';
-import { ActivatedRoute } from '@angular/router';
-
+import { ItemService } from '../service/item/item.service';
 
 @Component({
   selector: 'app-home',
@@ -10,18 +7,23 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  foods: Foods[] = [];
-  starRating = 0;
-  constructor(private fs: FoodService, private router: ActivatedRoute) { }
+  items: any[] = [];
+
+  constructor(private itemService: ItemService) { }
 
   ngOnInit(): void {
-    this.router.params.subscribe(params => {
-      if (params['searchItem'])
-        this.foods = this.fs.getAll().filter(food => food.name.toLowerCase().includes(params['searchItem'].toLowerCase()));
-      else if (params['tag'])
-        this.foods = this.fs.getAllFoodByTag(params['tag'])
-      else
-        this.foods = this.fs.getAll();
-    })
+    this.itemService.getItems().subscribe(
+      (response: any) => {
+        this.items = response.data.map((item: any) => {
+          if (!item.image) {
+            item.image = "https://coffee.alexflipnote.dev/random?"+item.id;
+          }
+          return item;
+        });
+      },
+      err => {
+        console.error('Error fetching items:', err);
+      }
+    );
   }
 }

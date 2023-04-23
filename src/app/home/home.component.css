@@ -1,67 +1,144 @@
-ul{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    list-style-type: none;
-    padding: 0;
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
 }
-ul li a{
-    height: 22rem;
-    width: 20rem;
-    border: 1px solid whitesmoke;
-    border-radius: 1rem;
-    margin: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    color: #e72929;
+
+ul li a {
+  height: 22rem;
+  width: 20rem;
+  border: 1px solid whitesmoke;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: #e72929;
 }
-li a:hover{
-    opacity: 0.6;
-    cursor: pointer;
+
+li a:hover {
+  opacity: 0.6;
+  cursor: pointer;
 }
-ngb-rating{
-    color: #FFC107;
-    font-size: 20px;
+
+ngb-rating {
+  color: #FFC107;
+  font-size: 20px;
 }
-.content{
-    padding:.5rem  1rem;
-    position: relative;
+
+.content {
+  padding: .5rem 1rem;
+  position: relative;
 }
-.favorite{
-    position: absolute;
-    top:.5rem;
-    right:1rem;
- font-size: 1.2rem;
+
+.favorite {
+  position: absolute;
+  top: .5rem;
+  right: 1rem;
+  font-size: 1.2rem;
 }
-.favorite.not{
-color: black;
+
+.favorite.not {
+  color: black;
 }
-.star{
-    margin-bottom: .2rem;
+
+.star {
+  margin-bottom: .2rem;
 }
-.product-item-footer{
-    display:flex;
-    justify-content: space-between;
-    margin-bottom: .2rem;
+
+.product-item-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: .2rem;
 }
-.origins{
-    flex:9;
+
+.origins {
+  flex: 9;
 }
-.origins span{
-    border-radius: 2rem;
-    background-color: whitesmoke;
-    color:grey ;
-    font-size: .8rem;
-    margin-right: .3rem;
-    display: inline-block;
+
+.origins span {
+  border-radius: 2rem;
+  background-color: whitesmoke;
+  color: grey;
+  font-size: .8rem;
+  margin-right: .3rem;
+  display: inline-block;
 }
-.cook-time{
-    font-size: .8rem;
+
+.cook-time {
+  font-size: .8rem;
+  text-align: center;
+  flex: 3;
+}
+
+.price {
+  color: #424242;
+}
+
+
+.title {
+  font-size: 36px;
+  /* font-weight: bold; */
+  /* margin-bottom: 20px; */
+  text-align: center;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0 -20px;
+  /* Add negative margin to counteract the margin on the menu-item */
+}
+
+.menu-item {
+  flex-basis: calc(33.33% - 40px);
+  /* Set the width of each item to 33.33% (minus 40px for the margins) */
+  margin: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+
+.menu-item-link {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.menu-item-img {
+  height: 270px;
+  overflow: hidden;
+}
+
+.menu-item-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.menu-item-link:hover .menu-item-img img {
+  transform: scale(1.1);
+}
+
+.menu-item-info {
+    padding: 20px; /* reduce the amount of padding */
     text-align: center;
-    flex: 3;
+  }
+
+.menu-item-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
-.price{
-    color: #424242;
+
+.menu-item-price {
+  font-size: 13px;
+  /* font-weight: bold; */
 }
