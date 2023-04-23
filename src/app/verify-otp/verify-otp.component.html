@@ -1,0 +1,20 @@
+<div class="container">
+  <br>
+  <h2>Verify OTP</h2>
+  <app-error-message [message]="errorMessage"></app-error-message>
+  <app-error-message [message]="successMessage"></app-error-message>
+  <br>
+
+  <form (submit)="onSubmit()">
+    <input type="email" class="form-control" id="email" [(ngModel)]="email" name="email" required hidden>
+    <div class="form-group">
+      <label for="otp">OTP</label>
+      <input type="text" class="form-control" id="otp" [(ngModel)]="otp" name="otp" required>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="isLoading">Submit</button>
+  </form>
+  <div *ngIf="isLoading">
+    <p>Verifying...</p>
+  </div>
+
+</div>

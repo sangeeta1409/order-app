@@ -1,0 +1,47 @@
+<header class="mat-elevation-z6 header">
+  <mat-toolbar color="accent">
+    <a routerLink="" class="logo mat-title">Lovely Food Store</a>
+    <nav>
+      <mat-nav-list>
+        <a
+          mat-list-item
+          class="route"
+          routerLink="/cart-page"
+          routerLinkActive="active"
+          style="color: white;"
+        >
+          Cart
+        </a>
+        <a
+          mat-list-item
+          class="route"
+          routerLink="/login"
+          routerLinkActive="active"
+          style="color: white;"
+          *ngIf="!isLoggedIn()"
+        >
+          Login
+        </a>
+        <a
+          mat-list-item
+          class="route"
+          routerLink="/register"
+          routerLinkActive="active"
+          style="color: white;"
+          *ngIf="!isLoggedIn()"
+        >
+          Register
+        </a>
+        <a
+          mat-list-item
+          class="route"
+          (click)="onLogout()"
+          style="color: white;"
+          *ngIf="isLoggedIn()"
+        >
+          Logout
+        </a>
+      </mat-nav-list>
+    </nav>
+  </mat-toolbar>
+</header>

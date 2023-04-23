@@ -1,0 +1,9 @@
+.mat-form-field-appearance-outline .mat-form-field-outline {
+    opacity: 1 !important;
+    color: rgba(0, 0, 0, 0.12) !important;
+  }
+  
+  .mat-form-field-appearance-outline .mat-form-field-outline-thick {
+    opacity: 1 !important;
+  }
+  

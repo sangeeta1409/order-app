@@ -1,0 +1,15 @@
+<app-error [visible]="!food" notFoundMessage="Product Not Found !" resetLinkTex="Go To HomePage"></app-error>
+
+<div *ngIf="food" class="container">
+  <img [src]="food.imageUrl" [alt]="food.name">
+</div>
+
+<div class="detail" *ngIf="food">
+  <div class="header">
+    <span class="name">{{ food.name }}</span>
+    <div class="price">
+      <span>{{ food.price | currency }}</span>
+    </div>
+  </div>
+  <button (click)="addToCart()">Add to cart</button>
+</div>

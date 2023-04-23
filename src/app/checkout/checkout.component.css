@@ -1,0 +1,36 @@
+ .order{
+    border-radius: 1rem;
+    border:none;
+    outline: none;
+    padding: .5rem;
+    opacity: .7;
+    color: #e72929;
+}
+.order:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.checkout h1{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: #e72929;
+}
+.checkout h3{
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+.col-sm-7{
+    border: 1px solid #ffbbbb;
+    border-radius: 1rem;
+    margin: .5rem;
+    
+}
+.col-sm-5{
+    border: 1px solid #ffbbbb;
+    border-radius: 1rem;
+    margin: .5rem;
+    
+   
+}

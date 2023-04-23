@@ -1,0 +1,55 @@
+.mat-title {
+  color: white;
+  font-style: italic;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: white !important;
+}
+
+.route {
+  font-size: 13px !important;
+
+  color: white !important;
+}
+
+::ng-deep .header .route,
+::ng-deep .header .mat-nav-list .mat-list-item.route {
+  font-size: 13px !important;
+  color: white !important;
+}
+
+.logo {
+  margin-right: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  /* Right-align the nav element */
+  width: 100%;
+  /* Make the nav element take up the remaining width */
+}
+
+mat-nav-list {
+  font-size: small;
+  display: flex;
+  color: white;
+}
+
+mat-nav-list a {
+  /* padding: 0 1.5rem; */
+  width: auto;
+  font-weight: 500;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  color: white;
+}
+
+.active {
+  border-bottom: 2px solid white;
+}
